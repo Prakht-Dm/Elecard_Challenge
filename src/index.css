@@ -1,13 +1,254 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  text-decoration: none;
+  font-size: 1em;
+  outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+code, kbd, samp, pre, tt, var, textarea, input, select, isindex, listing, xmp, plaintext {
+  font: inherit;
+  font-size: 1em;
+  white-space: normal;
 }
+
+dfn, i, cite, var, address, em {
+  font-style: normal;
+}
+
+th, b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+a, img, a img, iframe, form, fieldset, abbr, acronym, object, applet, table {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td, center {
+  text-align: left;
+  vertical-align: top;
+}
+
+body {
+  line-height: 1;
+  background: white;
+  color: black;
+}
+
+q {
+  quotes: "" "";
+}
+
+ul, ol, dir, menu {
+  list-style: none;
+}
+
+sub, sup {
+  vertical-align: baseline;
+}
+
+a {
+  color: inherit;
+}
+
+hr {
+  display: none;
+}
+
+font {
+  color: inherit !important;
+  font: inherit !important;
+  color: inherit !important;
+}
+
+marquee {
+  overflow: inherit !important;
+  -moz-binding: none;
+}
+
+blink {
+  text-decoration: none;
+}
+
+nobr {
+  white-space: normal;
+}
+
+body .main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  background: #77A6F7;
+  border: 1px solid #00887A;
+  z-index: 1;
+  font: 1.2em "Kosugi Maru", sans-serif;
+}
+
+body .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body .main-content .loader {
+  font-size: 40px;
+  padding: 0 100px;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slider;
+          animation-name: slider;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes slider {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slider {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+body .main-content .card_list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+body .main-content .card_list .card_content {
+  overflow: hidden;
+  margin: 0 7px 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  height: 160px;
+  border: 1px solid #00887A;
+  -webkit-box-shadow: 2px 2px 2px #00887A;
+          box-shadow: 2px 2px 2px #00887A;
+}
+
+body .main-content .card_list .card_content:hover {
+  -webkit-box-shadow: 3px 3px 7px #00887A;
+          box-shadow: 3px 3px 7px #00887A;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .main-content .card_list .card_content:not(:hover) {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .main-content .card_list .card_content image {
+  position: absolute;
+  top: 0;
+}
+
+body .main-content .card_list .card_content button {
+  position: relative;
+  top: -155px;
+  left: 180px;
+  width: 20px;
+  height: 20px;
+}
+
+body .main-content .card_list .card_content p {
+  padding: 3px;
+}
+
+body .main-content .filters {
+  margin-right: 7px;
+  position: relative;
+  top: 0;
+  height: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+  border: 1px solid #00887A;
+  border-radius: 5px;
+  width: 120px;
+}
+
+body .main-content .filters .navigation {
+  margin: 0 auto;
+}
+
+body .main-content .filters .navigation p {
+  text-align: center;
+}
+
+body footer {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #00887A;
+  padding: 5px;
+  border-color: red;
+  font: 1.2em "Kosugi Maru", sans-serif;
+}
+/*# sourceMappingURL=index.css.map */
