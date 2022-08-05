@@ -23,7 +23,7 @@ axios ({
     method: 'get',
     url:JSON_LIST_URL
 })
-    .then((response)=>{CARD_LIST.list = response.data})
+    .then((response)=>{CARD_LIST.list = [...response.data]})
     .catch((error)=>{
         console.log(error);
         setTimeout(getcardList, 5000)

@@ -154,6 +154,8 @@ body .main-content .loader {
 
 body .main-content .card_list {
   position: relative;
+  top: 0px;
+  left: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,8 +175,8 @@ body .main-content .card_list .card_content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 200px;
-  height: 160px;
+  width: 240px;
+  height: 230px;
   border: 1px solid #00887A;
   -webkit-box-shadow: 2px 2px 2px #00887A;
           box-shadow: 2px 2px 2px #00887A;
@@ -194,28 +196,48 @@ body .main-content .card_list .card_content:not(:hover) {
   transition: 0.5s;
 }
 
-body .main-content .card_list .card_content image {
-  position: absolute;
-  top: 0;
+body .main-content .card_list .card_content img {
+  width: 100%;
+  min-height: 160px;
+  max-height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .main-content .card_list .card_content button {
   position: relative;
-  top: -155px;
-  left: 180px;
+  top: -160px;
+  left: 220px;
   width: 20px;
   height: 20px;
 }
 
+body .main-content .card_list .card_content button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .main-content .card_list .card_content button:not(:hover) {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 body .main-content .card_list .card_content p {
   padding: 3px;
+  margin: -3px 2px;
+}
+
+body .main-content .card_list .card_content p:first-of-type {
+  margin-top: -20px;
 }
 
 body .main-content .filters {
   margin-right: 7px;
-  position: relative;
-  top: 0;
-  height: 260px;
+  position: fixed;
+  top: 40;
+  height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,7 +250,29 @@ body .main-content .filters {
   padding: 5px;
   border: 1px solid #00887A;
   border-radius: 5px;
-  width: 120px;
+  width: 130px;
+}
+
+body .main-content .filters .sort_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 230px;
+}
+
+body .main-content .filters .sort_block .sort_direction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px 0;
 }
 
 body .main-content .filters .navigation {
@@ -237,6 +281,14 @@ body .main-content .filters .navigation {
 
 body .main-content .filters .navigation p {
   text-align: center;
+}
+
+body .main-content .not_available {
+  opacity: 0.2;
+}
+
+body .main-content .deleted_card {
+  opacity: 0;
 }
 
 body footer {
@@ -248,7 +300,6 @@ body footer {
   height: 20px;
   background-color: #00887A;
   padding: 5px;
-  border-color: red;
   font: 1.2em "Kosugi Maru", sans-serif;
 }
 /*# sourceMappingURL=index.css.map */
