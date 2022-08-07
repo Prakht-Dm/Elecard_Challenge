@@ -101,6 +101,8 @@ header{
     &:not(:hover){
         transition: 0.5s;
     }
+
+
     img{
         
         width: 100%;
@@ -123,7 +125,7 @@ header{
           transition: 1s;
       }
     }
-    
+
     p{
         padding: 3px;
         margin: -3px 2px;
@@ -132,6 +134,37 @@ header{
       margin-top: -20px;
     }
 }
+.tree_list{
+  margin: 5px;
+  font-size: 1.3em;
+  &:hover{
+    cursor: pointer;
+  }
+  div *{
+    width: 160px;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+
+    ul{
+      display: none;
+   
+    }
+li{
+  margin-bottom: 10px;
+}
+    image{
+    width: 100%;
+    min-height: 160px;
+    max-height: 160px;
+    object-fit:cover;
+       
+      
+  }
+  }
+
+
+      } 
       }
 
   .filters{
@@ -186,4 +219,9 @@ footer{
     
       font: $banners_font;
     }
+}
+
+
+.li_group{
+  display: none;
 }

@@ -1,6 +1,6 @@
 const DEFAULT_SORT_KIND = {
     cards: true,
-    list: false,
+    tree: false,
 }
 
 const DEFAULT_SORT_TYPES = {
@@ -19,4 +19,8 @@ export const DEFAULT_FILTERS = {
     SORT_KIND: DEFAULT_SORT_KIND,
     SORT_TYPES: DEFAULT_SORT_TYPES,
     SORT_DIRECTION: DEFAULT_SORT_DIRECTION,
+    firstCardNumber: 0,
 }
+
+
+export const AMOUNT_OF_CARDS = 20;

@@ -8,7 +8,7 @@ import {Cards} from './cards/cards';
 
 function App() {
   const [currentCardList, setCurrentCardList] = useState('');
-  const [fiters, setFilters] = useState({...DEFAULT_FILTERS});
+  const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
     useEffect(() => {
       const loadingInterval = setInterval(()=> createCurrentList(CARD_LIST.list, 
@@ -25,11 +25,13 @@ function App() {
   <div className="main-content">
   <div>
     <Filters
+       filters = {filters}
+       setFilters = {setFilters}
        currentCardList = {currentCardList}
        setCurrentCardList = {setCurrentCardList}/>
   </div>
     <Cards
-    list = {CARD_LIST.list}
+    filters = {filters}
     currentCardList = {currentCardList}
     setCurrentCardList = {setCurrentCardList}
     />
