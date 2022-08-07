@@ -234,7 +234,7 @@ body .main-content .card_list .card_content p:first-of-type {
 }
 
 body .main-content .card_list .tree_list {
-  margin: 5px;
+  margin: 0 25px;
   font-size: 1.3em;
 }
 
@@ -242,25 +242,25 @@ body .main-content .card_list .tree_list:hover {
   cursor: pointer;
 }
 
-body .main-content .card_list .tree_list div * {
+body .main-content .card_list .tree_list div > * {
   width: 160px;
   margin-left: 10px;
   margin-top: 5px;
   font-size: 1em;
 }
 
-body .main-content .card_list .tree_list div * ul {
+body .main-content .card_list .tree_list div > * ul {
   display: none;
 }
 
-body .main-content .card_list .tree_list div * li {
-  margin-bottom: 10px;
+body .main-content .card_list .tree_list div > * li {
+  padding-left: 10px;
+  margin-bottom: 15px;
+  border-left: 2px dashed black;
 }
 
-body .main-content .card_list .tree_list div * image {
+body .main-content .card_list .tree_list div > * img {
   width: 100%;
-  min-height: 160px;
-  max-height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -335,7 +335,35 @@ body footer {
   font: 1.2em "Kosugi Maru", sans-serif;
 }
 
-.li_group {
+.category_list {
+  padding: 3px 20px;
+  font-size: 0.8em;
+}
+
+.fullScreenImage {
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.464);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fullScreenImage img {
+  margin: auto;
+  border: 2px solid black;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.hide_image {
   display: none;
 }
 /*# sourceMappingURL=index.css.map */
