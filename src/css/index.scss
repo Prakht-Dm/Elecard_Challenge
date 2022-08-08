@@ -186,6 +186,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       align-self: start;
+      flex: 0 1 94%;
 
       .card_content {
         overflow: hidden;

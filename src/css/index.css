@@ -205,6 +205,9 @@ body .main-content .card_list {
       flex-wrap: wrap;
   -ms-flex-item-align: start;
       align-self: start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 94%;
+          flex: 0 1 94%;
 }
 
 body .main-content .card_list .card_content {

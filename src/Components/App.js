@@ -21,14 +21,12 @@ function App() {
         ),
       0
     );
-  }, []);
+  }, [currentCardList]);
 
   return (
     <main className="main-container">
       <header className="main-header">
-        <p>
-          Elecard Challenge
-        </p>
+        <p>Elecard Challenge</p>
       </header>
       <div className="main-content">
         <div>
