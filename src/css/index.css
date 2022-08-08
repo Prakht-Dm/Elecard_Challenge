@@ -7,21 +7,56 @@
   outline: none;
 }
 
-code, kbd, samp, pre, tt, var, textarea, input, select, isindex, listing, xmp, plaintext {
+code,
+kbd,
+samp,
+pre,
+tt,
+var,
+textarea,
+input,
+select,
+isindex,
+listing,
+xmp,
+plaintext {
   font: inherit;
   font-size: 1em;
   white-space: normal;
 }
 
-dfn, i, cite, var, address, em {
+dfn,
+i,
+cite,
+var,
+address,
+em {
   font-style: normal;
 }
 
-th, b, strong, h1, h2, h3, h4, h5, h6 {
+th,
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
 }
 
-a, img, a img, iframe, form, fieldset, abbr, acronym, object, applet, table {
+a,
+img,
+a img,
+iframe,
+form,
+fieldset,
+abbr,
+acronym,
+object,
+applet,
+table {
   border: none;
 }
 
@@ -30,7 +65,10 @@ table {
   border-spacing: 0;
 }
 
-caption, th, td, center {
+caption,
+th,
+td,
+center {
   text-align: left;
   vertical-align: top;
 }
@@ -45,11 +83,15 @@ q {
   quotes: "" "";
 }
 
-ul, ol, dir, menu {
+ul,
+ol,
+dir,
+menu {
   list-style: none;
 }
 
-sub, sup {
+sub,
+sup {
   vertical-align: baseline;
 }
 
@@ -119,7 +161,7 @@ body .main-content {
 
 body .main-content .loader {
   font-size: 40px;
-  padding: 0 100px;
+  padding: 0 200px;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-name: slider;
@@ -249,10 +291,6 @@ body .main-content .card_list .tree_list div > * {
   font-size: 1em;
 }
 
-body .main-content .card_list .tree_list div > * ul {
-  display: none;
-}
-
 body .main-content .card_list .tree_list div > * li {
   padding-left: 10px;
   margin-bottom: 15px;
@@ -263,6 +301,12 @@ body .main-content .card_list .tree_list div > * img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+body .main-content .card_list .tree_list div:first-of-type {
+  margin-left: -10px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 body .main-content .filters {
@@ -357,10 +401,19 @@ body footer {
 }
 
 .fullScreenImage img {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
   margin: auto;
   border: 2px solid black;
   max-height: 90%;
   max-width: 90%;
+}
+
+.zoom_in_img img {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .hide_image {
