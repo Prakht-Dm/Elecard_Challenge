@@ -11,9 +11,8 @@ export function Filters({
 }) {
   useEffect(() => {
     sortArray({ filters, currentCardList, setCurrentCardList });
-    setFilters({ ...filters, ...{ firstCardNumber: 0 } });
     // eslint-disable-next-line
-  }, [filters.SORT_TYPES, filters.SORT_DIRECTION]);
+  }, [filters]);
 
   useEffect(() => {
     if (

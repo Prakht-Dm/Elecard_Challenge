@@ -129,19 +129,22 @@ $banners_font: 1.2em 'Kosugi Maru', sans-serif;
 $banners_color: black;
 
 body {
+
   .main-container {
     width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 
 
   header {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
+
     justify-content: space-between;
     padding: 5px;
     background: #77A6F7;
@@ -153,8 +156,10 @@ body {
 
   .main-content {
     display: flex;
+    justify-content: space-between;
     padding: 10px;
-    min-height: 100vh;
+    min-height: 100%;
+    max-width: 100%;
     overflow: hidden;
 
     .loader {
@@ -180,13 +185,34 @@ body {
     }
 
     .card_list {
+      width: 100%;
+      height: 100%;
       position: relative;
-      top: 0px;
-      left: 150px;
+      top: 30px;
+      left: 145px;
       display: flex;
       flex-wrap: wrap;
-      align-self: start;
-      flex: 0 1 94%;
+      margin-bottom: 45px;
+
+      @media (max-width: 680px) {
+        flex: 0 1 78%;
+      }
+
+      @media (min-width: 600px) {
+        flex: 0 1 79%;
+      }
+
+      @media (min-width: 900px) {
+        flex: 0 1 85%;
+      }
+
+      @media (min-width: 1200px) {
+        flex: 0 1 90%;
+      }
+
+      @media (min-width: 1900px) {
+        flex: 0 1 93%;
+      }
 
       .card_content {
         overflow: hidden;
@@ -271,7 +297,8 @@ body {
             object-fit: cover;
           }
         }
-        div:first-of-type{
+
+        div:first-of-type {
           margin-left: -10px;
           font-size: 30px;
           font-weight: bold;
@@ -281,52 +308,18 @@ body {
       }
     }
 
-    .filters {
-      margin-right: 7px;
-      position: fixed;
-      top: 40;
-      height: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 5px;
-      border: 1px solid #00887A;
-      border-radius: 5px;
-      width: 130px;
+  }
 
-      .sort_block {
-        display: flex;
-        flex-direction: column;
-        height: 230px;
+  .not_available {
+    opacity: 0.2;
+  }
 
-        .sort_direction {
-          display: flex;
-          flex-direction: column;
-          margin: 5px 0;
-        }
-      }
-
-      .navigation {
-        margin: 0 auto;
-
-        p {
-          text-align: center;
-        }
-      }
-    }
-
-    .not_available {
-      opacity: 0.2;
-    }
-
-    .deleted_card {
-      opacity: 0; 
-    }
-
+  .deleted_card {
+    opacity: 0;
   }
 
   footer {
-    position: sticky;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -334,6 +327,41 @@ body {
     background-color: #00887A;
     padding: 5px;
     font: $banners_font;
+  }
+}
+
+.filters {
+  margin-right: 7px;
+  position: fixed;
+  left: 10px;
+  top: 40px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  border: 1px solid #00887A;
+  border-radius: 5px;
+  width: 130px;
+
+  .sort_block {
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+
+    .sort_direction {
+      display: flex;
+      flex-direction: column;
+      margin: 5px 0;
+    }
+  }
+
+  .navigation {
+    margin: 0 auto;
+
+    p {
+      text-align: center;
+    }
   }
 }
 

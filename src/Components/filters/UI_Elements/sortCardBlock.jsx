@@ -1,5 +1,5 @@
 import { CARD_LIST } from "../../../API/list_loading";
-import { DEFAULT_FILTERS, AMOUNT_OF_CARDS } from "../../../storage/consts";
+import { AMOUNT_OF_CARDS } from "../../../storage/consts";
 import { previouPage, nextPage } from "../../../helpers/utils";
 
 export function SortCardsBlock({
@@ -17,9 +17,10 @@ export function SortCardsBlock({
         className="clear_filters"
         onClick={() => {
           if (filters.SORT_KIND.tree) return;
+
           localStorage.removeItem("Deleted_cards");
           setCurrentCardList([...CARD_LIST.list]);
-          setFilters({ ...DEFAULT_FILTERS });
+          setFilters({ ...filters });
         }}
       >
         Вернуть карточки

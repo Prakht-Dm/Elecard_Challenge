@@ -28,15 +28,15 @@ function App() {
       <header className="main-header">
         <p>Elecard Challenge</p>
       </header>
+
+      <Filters
+        filters={filters}
+        setFilters={setFilters}
+        currentCardList={currentCardList}
+        setCurrentCardList={setCurrentCardList}
+      />
+
       <div className="main-content">
-        <div>
-          <Filters
-            filters={filters}
-            setFilters={setFilters}
-            currentCardList={currentCardList}
-            setCurrentCardList={setCurrentCardList}
-          />
-        </div>
         <Cards
           filters={filters}
           currentCardList={currentCardList}
